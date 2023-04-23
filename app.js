@@ -23,7 +23,7 @@ class calculator{
     }
 
     del(){
-        this.currOpr = this.currOpr.slice(0,-1);
+        this.currOpr = this.currOpr.slice(0,-1)
     }
 
     appendNumber(number){
@@ -71,13 +71,10 @@ class calculator{
     }
 
     updateOutput(){
-        if(this.currOpr.length>15){
-            this.currOpr = this.currOpr.slice(0,14);
-        }
-        this.currText.innerText = this.currOpr;
-        if(this.opr != ''){
+        if(this.opr != null){
             this.prevText.innerText = `${this.prevOpr} ${this.opr}`
         }
+        this.currText.innerText = this.currOpr;
     }
 
 }
